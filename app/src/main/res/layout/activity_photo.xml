@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context="youilab.main.ui.evidences.photo">
+    <RelativeLayout
+            android:id="@+id/containerPhotoView"
+            android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout
+                android:id="@+id/appbar"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_back"
+                        app:fabSize="mini"
+                        app:elevation="2dp"
+                        app:backgroundTint="@color/white"
+                        android:layout_margin="10dp"
+                        app:rippleColor="@color/white"
+                />
+                <TextView
+                        android:id="@+id/Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:text="evidencia" tools:ignore="RtlCompat"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                card_view:cardCornerRadius="1dp"
+                app:cardElevation="0dp"
+                card_view:cardBackgroundColor="@color/blue_light"
+                android:layout_margin="0dp"
+                android:layout_above="@id/lblEtiquetas"
+                android:layout_below="@id/appbar"
+        >
+            <ImageView
+                    android:id="@+id/evidence_photo"
+                    android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:scaleType="centerInside"/>
+        </androidx.cardview.widget.CardView>
+        <TextView
+                android:id="@+id/lblEtiquetas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/cvTags"
+                android:text="Etiquetas:"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:textAlignment="textStart"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="20sp"
+                android:textColor="@color/blue_dark"
+                android:fontFamily="@font/quicksand_bold" tools:ignore="RtlCompat"/>
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvTags"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                card_view:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+                card_view:cardBackgroundColor="@color/blue_light"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="25dp"
+                android:layout_above="@id/cvComment"
+
+        >
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTags"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.cardview.widget.CardView>>
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvComment"
+                android:layout_width="match_parent"
+                card_view:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                android:layout_margin="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_height="100dp"
+        >
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="100dp"
+                    android:gravity="center">
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/btnSaveQuestionOpen"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:hintEnabled="false">
+
+                    <EditText
+                            android:id="@+id/txtAnswerOpen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Escribe aquí"
+                            android:fontFamily="@font/quicksand_regular"
+                            android:textColor="@color/greyDark"
+                            android:textColorHint="@color/grey"
+                            android:maxHeight="250dp"
+                            android:padding="15dp"
+                            android:inputType="textNoSuggestions"
+                            android:background="@drawable/ripple_login_input"
+                    />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/btnSaveQuestionOpen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:fabSize="mini"
+                        app:elevation="3dp"
+                        android:layout_centerVertical="true"
+                        app:rippleColor="@color/white"
+                        app:backgroundTint="@color/colorPrimary"
+                        android:src="@drawable/ic_send"
+                        android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

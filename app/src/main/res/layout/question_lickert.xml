@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:id="@+id/lickertQuestion"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/idTitleSurvey"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginBottom="5dp"
+        tools:context=".ui.evidences.SurveyActivity"
+        tools:showIn="@layout/activity_survey"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:visibility="visible">
+
+    <TextView
+            android:id="@+id/txtValueLickert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@id/txtLowerValue"
+            android:layout_marginBottom="60dp"
+            android:layout_centerHorizontal="true"
+            android:text="3"
+            android:textColor="@color/greyDark"
+            android:fontFamily="@font/baloochettan_regular"
+            android:textSize="90sp"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+    <TextView
+            android:id="@+id/txtLowerValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/seekBarLickert"
+            android:text="Nulo"
+            android:textColor="@color/greyDark"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="13sp"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+    />
+    <TextView
+            android:id="@+id/txtHighestValue"
+            android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+            android:layout_below="@id/seekBarLickert"
+              android:text="Completamente"
+            android:textColor="@color/greyDark"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="13sp"
+            android:layout_marginEnd="20dp"
+              android:gravity="center"
+              android:textAppearance="@style/TextAppearance.AppCompat.Title"
+    />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/btnSaveQuestionLickert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            card_view:cardBackgroundColor="@color/colorPrimary"
+            card_view:cardCornerRadius="20dp">
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="15dp"
+                    android:text="Siguiente"
+                    android:textSize="14sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/white"/>
+            <ImageView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                       android:src="@drawable/ic_arrow_right_2"
+                      android:scaleType="center"
+
+                    android:contentDescription="TODO"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <SeekBar
+
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="4"
+            android:progress="2"
+            android:layout_centerInParent="true"
+            android:id="@+id/seekBarLickert"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="20dp"
+            />
+
+
+</RelativeLayout>

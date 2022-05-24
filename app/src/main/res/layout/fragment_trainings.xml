@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.trainings.TrainingsFragment" >
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+        <TextView
+                android:id="@+id/fragmentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capacitaciones"
+                android:layout_margin="15dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="28sp"
+                android:padding="5dp"
+                android:gravity="start"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/black"/>
+
+
+        <RelativeLayout
+                android:id="@+id/rlyOptions"
+                android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_below="@id/fragmentTitle"
+                android:layout_marginTop="10dp"
+                android:elevation="3dp"
+                android:background="@color/transparent">
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                  android:layout_toStartOf="@id/center"
+
+            >
+                <View
+                        android:id="@+id/lineBlue"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/blue"
+                        android:layout_alignParentStart="true"/>
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSoonTrainings"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        card_view:cardCornerRadius="0dp"
+                        app:cardElevation="1dp"
+                        android:layout_toEndOf="@id/lineBlue"
+                        android:layout_centerInParent="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/white">
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginVertical="5dp"
+                              android:layout_marginHorizontal="10dp"
+                              android:textColor="@color/black"
+                              android:layout_gravity="bottom"
+                              android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                              android:fontFamily="@font/quicksand_bold"
+                              android:text="Proximas"/>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:id="@+id/center"
+                    android:layout_width="120dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+            >
+                <View
+                        android:id="@+id/lineYellow"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/yellow"
+                        android:layout_alignParentStart="true"/>
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cvActiveTrainings"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/lineYellow"
+                        card_view:cardCornerRadius="0dp"
+                        app:cardElevation="1dp"
+                        android:layout_centerInParent="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/white"
+                        >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginVertical="5dp"
+                              android:layout_marginHorizontal="10dp"
+                              android:textColor="@color/black"
+                              android:layout_gravity="bottom"
+                              android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                              android:fontFamily="@font/quicksand_bold"
+                              android:text="Activas"/>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/center"
+            >
+                <View
+                        android:id="@+id/lineOrange"
+                        android:layout_width="5dp"
+                      android:layout_height="match_parent"
+                      android:background="@color/orange"
+                    android:layout_alignParentStart="true"/>
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cvAllTrainings"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/lineOrange"
+                        card_view:cardCornerRadius="0dp"
+                        app:cardElevation="0dp"
+                        android:layout_centerInParent="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/white"
+                >
+                    
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginVertical="5dp"
+                              android:layout_marginHorizontal="10dp"
+                              android:textColor="@color/black"
+                              android:layout_gravity="bottom"
+                              android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                              android:fontFamily="@font/quicksand_bold"
+                              android:text="Ver Todas"/>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvNewTraining"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                android:layout_below="@id/rlyOptions"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Agregar Capacitación"
+                      android:textAlignment="center"
+                      android:fontFamily="@font/quicksand_bold"
+                      android:textColor="@color/white"
+                      android:layout_margin="10dp"/>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/cvNewTraining"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="10dp"
+                app:cardElevation="7dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                            android:id="@+id/rlyAvatarInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true">
+
+                        <androidx.cardview.widget.CardView
+                                android:id="@+id/cvImage"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                card_view:cardCornerRadius="20dp"
+                                app:cardElevation="0dp"
+                                android:layout_centerVertical="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardBackgroundColor="@color/white"
+                                android:layout_margin="10dp" >
+                            <ImageView
+                                    android:id="@+id/imgAvatar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/ic_launcher_round"
+                                    android:scaleType="centerCrop"
+                            />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                                android:id="@+id/txtAvatarName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Etiqueta"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                android:textSize="20sp"
+                                android:padding="5dp"
+                                android:gravity="start"
+                                android:layout_toEndOf="@id/cvImage"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/quicksand_medium"
+                                android:textColor="@color/greyDark"/>
+
+
+                    </RelativeLayout>
+                <TextView
+                        android:id="@+id/txtWithoutTrainings"
+                        android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_below="@+id/rlyAvatarInfo"
+                          android:layout_alignParentBottom="true"
+                          android:text="No tienes capacitaciones agregadas"
+                          android:gravity="center"
+                          android:textColor="@color/greyDark"
+                          android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                          android:fontFamily="@font/quicksand_medium"
+                />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="visible"
+                        android:id="@+id/rvTrainingsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="?attr/actionBarSize"
+                        android:layout_below="@+id/rlyAvatarInfo"
+
+                >
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

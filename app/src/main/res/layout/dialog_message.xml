@@ -1,0 +1,55 @@
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:cardCornerRadius="10dp"
+        android:padding="10dp"
+        android:background="@color/transparent"
+        app:backgroundTint="@color/transparent"
+        card_view:cardBackgroundColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="vertical"
+            android:layout_margin="15dp">
+        <TextView
+                android:id="@+id/lblMessage"
+                android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+                android:text="Este es un mesage para el usaurio"
+               android:textAlignment="center"
+               android:textColor="@color/greyDark"
+               android:fontFamily="@font/quicksand_medium"
+               android:layout_margin="10dp"
+               android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+     />
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/btnOk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                card_view:cardBackgroundColor="@color/orange"
+                card_view:cardCornerRadius="5dp">
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginVertical="7dp"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Aceptar"
+                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/white"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

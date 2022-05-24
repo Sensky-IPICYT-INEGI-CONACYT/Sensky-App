@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.evidences.SurveyActivity">
+    <RelativeLayout
+            android:id="@+id/idTitleSurvey"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+        <TextView
+                android:id="@+id/txtSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="5dp"
+                android:maxHeight="200dp"
+                android:textSize="16sp"
+                android:scrollbars="vertical"
+                android:textAlignment="viewStart"
+                android:textColor="@color/greyDark"
+                android:fontFamily="@font/quicksand_bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:text="Seccion 1"/>
+
+        <TextView
+                android:id="@+id/txtQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/txtSection"
+                android:padding="10dp"
+                android:maxHeight="200dp"
+                android:textSize="18sp"
+                android:scrollbars="vertical"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:fontFamily="@font/quicksand_medium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:text="¿Cuantos años tienes hola como estas yo me siento fabntastico?"/>
+        <TextView
+                android:id="@+id/txtNote"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtQuestion"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:background="@color/white"
+                android:paddingStart="10dp"
+                android:textSize="13sp"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/quicksand_bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:text="Solo si la persona quiere contestar"/>
+
+
+
+
+    </RelativeLayout>
+    <include layout="@layout/question_open"/>
+    <include layout="@layout/question_multioption"/>
+    <include layout="@layout/question_multianswer"/>
+    <include layout="@layout/end_question"/>
+    <include layout="@layout/question_lickertgroup"/>
+    <include layout="@layout/question_lickert"/>
+</RelativeLayout>

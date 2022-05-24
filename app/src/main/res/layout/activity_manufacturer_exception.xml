@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PermissionLocation">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+        <TextView
+                android:id="@+id/titleConfiguration"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:text="Configuración Extra"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:fontFamily="@font/quicksand_bold"
+        />
+        <TextView
+                android:id="@+id/actionConfiguration"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_below="@+id/titleConfiguration"
+                android:text="Sigue los siguientes pasos para terminar.\n\n1.- Selecciona 'Configurar'.\n\n2.- Busca la aplicación Sensky.\n\n3.- Desactiva la gestion automatica y aceptar, sin desactivar las 3 opciones que aparecen."
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/greyDark"
+                android:fontFamily="@font/quicksand_bold"/>
+        <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"
+                   android:src="@mipmap/smartphone"
+                   android:layout_below="@id/actionConfiguration"
+                   android:layout_above="@id/cvFiles"/>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvFiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                android:layout_above="@id/cvFinish"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:padding="10dp"
+                card_view:cardCornerRadius="5dp"
+                android:layout_marginBottom="10dp"
+                card_view:cardBackgroundColor="@color/pink"
+                android:layout_marginTop="10dp">
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+            >
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:text="Configurar"
+                          android:textColor="@color/white"
+                          android:textAlignment="center"
+                          android:padding="10dp"
+                          android:gravity="center"
+                          android:fontFamily="@font/baloochettan_regular"
+                          android:textSize="20sp"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvFinish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:padding="10dp"
+                card_view:cardCornerRadius="5dp"
+                android:layout_marginBottom="20dp"
+                card_view:cardBackgroundColor="@color/green"
+                >
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+            >
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:text="Listo"
+                          android:textColor="@color/white"
+                          android:textAlignment="center"
+                          android:padding="10dp"
+                          android:gravity="center"
+                          android:fontFamily="@font/baloochettan_regular"
+                          android:textSize="20sp"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

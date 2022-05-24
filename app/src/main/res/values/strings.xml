@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">SenSky</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Taller</string>
+    <string name="menu_experiments">Mis talleres</string>
+    <string name="menu_avatars">Avatars</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="home_photo">Fotografía</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_home_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="hello_gallery_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="hello_slideshow_second">Hello HomeSecondFragment. Arg: %1$s</string>
+
+
+    <string name="evidence_state_ok">Registrada</string>
+    <string name="evidence_state_pendding">Pendiente</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="hello_dashboard_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="hello_notifications_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="title_home">Evidencias</string>
+    <string name="title_dashboard">Capacitaciones</string>
+    <string name="title_notifications">Avatares</string>
+
+    <string name="add_avatar">Nuevo Avatar</string>
+</resources>
